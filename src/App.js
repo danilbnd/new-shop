@@ -1,10 +1,10 @@
-import './App.css';
+import React from 'react';
+import './main.scss';
+import Popup from './components/popup/Popup'
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Sasha</h1>
-
       <button>start button click</button>
     </div>
   );
