@@ -1,10 +1,12 @@
 import React from "react";
-import './popup-style.scss'
-import {render} from "@testing-library/react";
+import './popup-style.scss';
 
-export function Popup() {
-    render(
-
+function Popup() {
+    return (
+        <div className='popup'>
+            <button>Close popup</button>
+        </div>
     )
-
 }
+
+export default Popup;
