@@ -1,5 +1,5 @@
 import React from 'react';
-import './main.scss';
+import './assets/style/main.scss';
 import './App.css';
 import Popup from './components/popup/Popup'
 
