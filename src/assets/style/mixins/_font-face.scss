@@ -1,0 +1,26 @@
+@mixin font-face($name, $slug, $weight, $style, $single: false, $type: 'ttf') {
+  $path: '/assets/fonts';
+  @font-face {
+    font-family: '#{$name}';@if $single == true {
+    $file: '';
+    $format: '';
+    @if $type == otf {
+      $file: '.otf';
+      $format: 'opentype';
+    } @else if $type == woff2 {
+      $file: '.woff2';
+      $format: 'woff2';
+    } @else {
+      $file: '.ttf';
+      $format: 'truetype';
+    }
+    src: url($path + '/' + $name + '/' + $slug + $file) format($format);
+  } @else {
+    src: url($path + '/' + $name + '/' + $slug +'.eot');
+    src: local('#{$slug}'), url($path + '/' + $name + '/' + $slug + '.eot?#iefix') format('embedded-opentype'), url($path + '/' + $name + '/' + $slug + '.woff') format('woff'), url($path + '/' + $name + '/' + $slug + '.ttf') format('truetype');
+  } font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+

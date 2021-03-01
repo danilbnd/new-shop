@@ -4,6 +4,7 @@ import './popup-style.scss';
 function Popup() {
     return (
         <section className="ba-section">
+            <img src="../assets/img/ba-bgr.jpg" alt=""/>
             <div className="ba-container">
                 <div className="ba-container-form">
                     <div className="ba-form__title">
