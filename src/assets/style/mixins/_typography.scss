@@ -1,0 +1,328 @@
+@mixin h1($color: c-text()) {
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $color;
+  @include mobile {
+    font-size: 28px;
+    line-height: 44px;
+  }
+  @include tablet-up {
+    font-size: 42px;
+    line-height: 59px;
+  }
+  @include fourK {
+    font-size: 84px;
+    line-height: 1.42;
+  }
+}
+
+@mixin h2($c: c-text()) {
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  @if $c != null {
+    color: $c;
+  }
+  @include mobile {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  @include tablet-up {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  @include fourK {
+    font-size: 72px;
+    line-height: 83px;
+  }
+}
+
+@mixin h3($c: c-text(), $lh: 35px) {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: $lh;
+  @if $c != null {
+    color: $c;
+  }
+  @include fourK {
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 1.42;
+    letter-spacing: 0.06em;
+  }
+}
+
+@mixin label($c: c-text(), $fw: bold, $lh: 26px) {
+  font-weight: $fw;
+  font-size: 16px;
+  line-height: $lh;
+  @if $c != null {
+    color: $c;
+  }
+  @include fourK {
+    font-size: 32px;
+    line-height: 1.62;
+  }
+}
+
+@mixin text($c: c-text(), $fw: normal, $lh: 26px) {
+  font-weight: $fw;
+  font-size: 14px;
+  line-height: $lh;
+  @if $c != null {
+    color: $c;
+  }
+  @include fourK {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+}
+
+@mixin small($c: c-text(), $lh: normal) {
+  font-size: 12px;
+  line-height: $lh;
+  @if $c != null {
+    color: $c;
+  }
+  @include fourK {
+    font-size: 24px;
+    line-height: 1.08;
+  }
+}
+
+@mixin genText($fs: 16px, $lh: normal, $fw: normal, $c: c-text()) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  @if $c != null {
+    color: $c;
+  }
+}
+
+
+@mixin decor {
+  font-family: $f-second;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin decor-sm($c: color(), $insert: true) {
+  @if ($insert == true) {
+    @include decor;
+  }
+  font-size: 30px;
+  line-height: 35px;
+  @if $c != null {
+    color: $c;
+  }
+}
+
+@mixin decor-md($c: color(), $insert: true) {
+  @if ($insert == true) {
+    @include decor;
+  }
+  font-size: 50px;
+  line-height: 55px;
+  @if $c != null {
+    color: $c;
+  }
+}
+
+@mixin decor-lg($c: color(), $insert: true) {
+  @if ($insert == true) {
+    @include decor;
+  }
+  font-size: 60px;
+  line-height: 65px;
+  @if $c != null {
+    color: $c;
+  }
+}
+
+@mixin decor-xl($c: color(), $insert: true) {
+  @if ($insert == true) {
+    @include decor;
+  }
+  font-size: 80px;
+  line-height: 65px;
+  @if $c != null {
+    color: $c;
+  }
+}
+
+@mixin decor-title($c: color()) {
+  @include decor;
+  @include decor-sm($c, false);
+  @include tablet-up {
+    @include decor-md($c, false);
+  }
+}
+
+@mixin decor-big-title($c: color()) {
+  @include decor;
+  @include decor-md($c, false);
+  @include media($tablet, $laptop - 1) {
+    @include decor-lg($c, false);
+  }
+  @include laptop-up {
+    @include decor-xl($c, false);
+  }
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin ul-custom($c: color()) {
+  @include reset-list;
+
+  li {
+    display: flex;
+    //font-size: 16px;
+    //line-height: 26px;
+    margin: 0 0 $x-12 0;
+    @include tablet-up {
+      margin: 0 0 $x-18 0;
+    }
+    @include fourK {
+      margin: 0 0 36px 0;
+      //font-size: 32px;
+      //line-height: 52px;
+    }
+
+    &:before {
+      content: '/';
+      font-size: 18px;
+      color: $c;
+      margin: 0 $x-12 0 0;
+      @include decor;
+      @include fourK {
+        margin-right: 24px;
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+@mixin h0-new($c: c-text('primary-new')) {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 85%;
+  @if $c != null {
+    color: $c;
+  }
+  @include tablet-up {
+    font-size: 120px;
+    line-height: 85%;
+  }
+}
+
+@mixin h1-new($c: c-text('primary-new')) {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 85%;
+  @if $c != null {
+    color: $c;
+  }
+  @include tablet-up {
+    font-size: 64px;
+    line-height: 94%;
+  }
+}
+
+@mixin h2-new($c: c-text('primary-new')) {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 25px;
+  @if $c != null {
+    color: $c;
+  }
+  @include tablet-up {
+    font-size: 52px;
+    line-height: 44px;
+  }
+}
+
+@mixin h3-new($c: c-text('primary-new')) {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  @if $c != null {
+    color: $c;
+  }
+  @include tablet-up {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
+
+@mixin h4-new($c: c-text('primary-new')) {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  @if $c != null {
+    color: $c;
+  }
+  @include tablet-up {
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+
+@mixin h5-new($c: c-text('primary-new')) {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  @if $c != null {
+    color: $c;
+  }
+  @include tablet-up {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@mixin text-new($c: $new-d-grey, $fw: 400, $lh: 24px) {
+  font-weight: $fw;
+  font-size: 16px;
+  line-height: $lh;
+  color: $c;
+
+  @include tablet-up {
+    font-size: 18px;
+    line-height: 27px
+  }
+}
+
+@mixin small-new($c: $new-d-grey, $fw: 400, $lh: 12px) {
+  font-weight: $fw;
+  font-size: 10px;
+  line-height: $lh;
+  color: $c;
+
+  @include tablet-up {
+    font-size: 14px;
+    line-height: 17px
+  }
+}
+
+@mixin small-bold-new($c: $new-d-grey, $fw: 600, $lh: 12px) {
+  font-weight: $fw;
+  font-size: 10px;
+  line-height: $lh;
+  color: $c;
+
+  @include tablet-up {
+    font-size: 14px;
+    line-height: 17px
+  }
+}
+
+@mixin label-new($c: $new-grey, $fw: 500, $lh: 16px) {
+  font-weight: $fw;
+  font-size: 14px;
+  line-height: $lh;
+  color: $c;
+}

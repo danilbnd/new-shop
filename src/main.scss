@@ -1,0 +1,19 @@
+//global files
+@import "assets/style/setup";
+@import "assets/style/normalize";
+
+@import "assets/style/common/global";
+@import "assets/style/common/fonts";
+
+
+//component local files
+@import "components/popup/popup-style";
+@import "components/header/header";
+
+
+
+//components global UI
+@import "assets/style/components/UI/dropdown";
+
+// swiper slider
+//@import '~swiper/swiper';
