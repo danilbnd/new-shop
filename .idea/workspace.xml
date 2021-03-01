@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="261c5afa-d761-466b-849c-ac3e9d2bb715" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/popup/popup-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/ba-bgr.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/popup/Popup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/popup/Popup.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/popup/popup-style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
-    </list>
+    <list default="true" id="261c5afa-d761-466b-849c-ac3e9d2bb715" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614195097850</updated>
       <workItem from="1614195100823" duration="1810000" />
-      <workItem from="1614240239617" duration="1524000" />
+      <workItem from="1614240239617" duration="1659000" />
     </task>
     <servers />
   </component>
