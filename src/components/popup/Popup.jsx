@@ -1,5 +1,5 @@
 import React from "react";
-import './popup-style.css';
+import './popup-style.scss';
 
 function Popup() {
     return (
